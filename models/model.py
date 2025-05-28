@@ -5,6 +5,13 @@ from config.database import Base
 class Vehicle(Base):
     __tablename__ = 'vehicles'
 
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    price = Column(Float)
+    image = Column(String)
+    seats = Column(Integer)
+    type = Column(String)
+
     bookings = relationship("Booking", back_populates="vehicle")
 
 class Destination(Base):
