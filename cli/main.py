@@ -1,5 +1,5 @@
 from config.database import Session
-from models.models import Vehicle, Destination, Booking
+from models.model import Vehicle, Destination, Booking
 
 def main():
     session = Session()
