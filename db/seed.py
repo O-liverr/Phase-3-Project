@@ -3,6 +3,7 @@ from models.model import Vehicle, Destination, Booking
 
 Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(bind=engine)
+print("📦 Tables created successfully.")
 
 session = Session()
 
@@ -14,4 +15,7 @@ destination2 = Destination(name="Ol Pejeta", base_price=150, image="ol-pejeta.jp
 
 session.add_all([vehicle1, vehicle2, destination1, destination2])
 session.commit()
+
+print("✅ Vehicles and destinations inserted into the database.")
+
 session.close()
